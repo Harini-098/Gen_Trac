@@ -80,8 +80,9 @@ def bake():
     return "welcome to the world of baking!"
 
 @app.get("/cook")
-def cook(): 
-    return "welcome to the world of cooking!"
+def cook():
+    """Simple greeting endpoint for the cooking route."""
+    return {"message": "welcome to the world of cooking!"}
 
 #POST: add a new product/submit a new product
 @app.post("/products")
