@@ -79,6 +79,10 @@ def greet():
 def bake(): 
     return "welcome to the world of baking!"
 
+@app.get("/cook")
+def cook(): 
+    return "welcome to the world of cooking!"
+
 #POST: add a new product/submit a new product
 @app.post("/products")
 def add_product(product: Product, db: Session = Depends(get_db)):
