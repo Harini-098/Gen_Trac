@@ -75,6 +75,10 @@ def get_product_by_id(id:int, db:Session = Depends(get_db)):
 def greet(): 
     return "welcome to the world of programming!"
 
+@app.get("/bake")
+def bake(): 
+    return "welcome to the world of baking!"
+
 #POST: add a new product/submit a new product
 @app.post("/products")
 def add_product(product: Product, db: Session = Depends(get_db)):
